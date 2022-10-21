@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSQLite.Views.UpdatePerson">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Actualizar Persona" FontSize="Medium"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="txtCode" Placeholder="ID de persona" Text="{Binding code}" IsVisible="False"></Entry>
+            
+            <Label Text="NOMBRES"></Label>
+            <Entry x:Name="txtFirstnames" Placeholder="Ingrese sus nombres" Text="{Binding firstNames}"></Entry>
+
+            <Label Text="APELLIDO"></Label>
+            <Entry x:Name="txtLastnames" Placeholder="Ingrese sus apellidos" Text="{Binding lastNames}"></Entry>
+
+            <Label Text="EDAD"></Label>
+            <Entry x:Name="txtAge" Placeholder="Ingrese su edad" Keyboard="Numeric" Text="{Binding age}"></Entry>
+
+            <Label Text="DIRECCION"></Label>
+            <Entry x:Name="txtAddress" Placeholder="Ingrese su direccion" Text="{Binding address}"></Entry>
+
+            <Label Text="CORREO"></Label>
+            <Entry x:Name="txtEmail" Placeholder="Ingrese su correo" Keyboard="Email" Text="{Binding email}"></Entry>
+
+            <Button x:Name="btnConfirmUpdate" Text="CONFIRMAR" Clicked="btnConfirmUpdate_Clicked"></Button>
+            <Button x:Name="btnCancelUpdate" Text="VOLVER" Clicked="btnCancelUpdate_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
